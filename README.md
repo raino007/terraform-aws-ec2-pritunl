@@ -1,19 +1,14 @@
 ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
 # Terraform Module for Pritunl VPN Server Deployment
 This Terraform module simplifies the deployment of a Pritunl VPN server on an Amazon Elastic Compute Cloud (EC2) instance. It streamlines the process of setting up a Pritunl VPN, offering a fundamental installation. Moreover, we're thrilled to share that we have forthcoming updates planned to enhance its functionality.
-
 ## About Pritunl
 Pritunl is an open-source VPN server that provides secure and easy-to-use VPN access for various use cases, from remote access to site-to-site connections.
-
 ## Key Features
 **Simplified Deployment**: Easily deploy a Pritunl VPN server on EC2 with minimal configuration.
-
 **Future Enhancements**: We have an exciting roadmap of additional features and improvements in the pipeline, including enhanced security, advanced configuration options, and more. 
-
 Stay tuned for updates in upcoming releases!
 ## Prerequisites
 Before you begin, ensure you have the following prerequisites in place:
-
 1. An AWS account with the necessary permissions.
 2. Terraform installed on your local machine.
 3. An existing Virtual Private Cloud (VPC) within your AWS account.

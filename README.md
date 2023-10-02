@@ -5,7 +5,9 @@ This Terraform module simplifies the deployment of a Pritunl VPN server on an Am
 Pritunl is an open-source VPN server that provides secure and easy-to-use VPN access for various use cases, from remote access to site-to-site connections.
 ## Key Features
 **Simplified Deployment**: Easily deploy a Pritunl VPN server on EC2 with minimal configuration.
+
 **Future Enhancements**: We have an exciting roadmap of additional features and improvements in the pipeline, including enhanced security, advanced configuration options, and more. 
+
 Stay tuned for updates in upcoming releases!
 ## Prerequisites
 Before you begin, ensure you have the following prerequisites in place:
@@ -62,8 +64,3 @@ This module is open-source and is licensed under the [Apache License 2.0](LICENS
 We encourage contributions, issue reports, and feature suggestions through GitHub Issues.
 
 Enjoy using the module with the flexibility of the Apache License 2.0!
-
-
-
-
-

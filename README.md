@@ -11,38 +11,42 @@ Pritunl is an open-source VPN server that provides secure and easy-to-use VPN ac
 **Future Enhancements**: We have an exciting roadmap of additional features and improvements in the pipeline, including enhanced security, advanced configuration options, and more. 
 
 Stay tuned for updates in upcoming releases!
-
 ## Prerequisites
-
 Before you begin, ensure you have the following prerequisites in place:
 
 1. An AWS account with the necessary permissions.
 2. Terraform installed on your local machine.
 3. An existing Virtual Private Cloud (VPC) within your AWS account.
 4. An SSH key pair for securely accessing the EC2 instance.
-
 ## Usage
 Check valid versions on:
 * Github Releases: https://github.com/raino007/terraform-aws-ec2-pritunl/releases
-* Terraform Module Registry: 
-
+* Terraform Module Registry: https://registry.terraform.io/modules/raino007/ec2-pritunl/aws/latest
 ## Requirements
-
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.5 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.0 |
-
 ## Example
 ```
+module "ec2-pritunl" {
+    source  = "raino007/ec2-pritunl/aws"
+    version = "1.0.0"
+    name              = "Pritunl"
+    instance_type     = "t3a.small"
+    instance_ami      = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-*"]
+    key_name          = "KeyName"
+    subnet_id         = "subnet-xx"
+    attach_elastic_ip = "false"
+    vol_size          = 30
+    vpc_id            = "vpc-XX"
+    vpn_udp_port      = 1194
+}
 ```
-
 ## Accessing Pritunl Dashboard
 
 NB: After successfully provisioning the Pritunl instance, it may take approximately 5 minutes for the server to initialize and the Pritunl dashboard to become accessible.
 You can access the pritunl dashboard using **https://PUBLIC_IP**
-
-
 ## Inputs
 | Name | Description | Type | Required |
 |------|-------------|------|:--------:|
